@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: saloon-brothers
+    env: python
+    buildCommand: "npm --prefix frontend install && npm --prefix frontend run build && pip install -r backend/requirements.txt"
+    startCommand: "gunicorn --chdir backend app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: saloon_data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,11 @@
+{
+  "name": "saloon-brothers",
+  "version": "1.0.0",
+  "description": "Saloon Brothers POS & Veresiye Takip Sistemi",
+  "scripts": {
+    "start": "python backend/app.py",
+    "dev:backend": "python backend/app.py",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build"
+  }
+}
