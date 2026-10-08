@@ -272,8 +272,8 @@ def init_db():
 def seed_users_and_data(conn):
     cursor = conn.cursor()
     default_users = [
-        ('berat', '123456', 'Berat Han Çiftçi', 'Erkek Kuaför & Kişisel Bakım'),
-        ('izzethan', '123456', 'İzzethan Çiftci', 'Erkek Kuaför & Kişisel Bakım'),
+        ('berat', '1810', 'Berat Han Çiftçi', 'Erkek Kuaför & Kişisel Bakım'),
+        ('izzethan', '0842', 'İzzethan Çiftci', 'Erkek Kuaför & Kişisel Bakım'),
         ('akif', '123456', 'Akif Özbek', 'Erkek Kuaför & Kişisel Bakım'),
         ('sinan', '123456', 'Sinan Kahraman', 'Erkek Kuaför & Kişisel Bakım'),
         ('turgut', '123456', 'Turgut Akhan', 'Erkek Kuaför & Kişisel Bakım')
