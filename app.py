@@ -7,7 +7,10 @@ sys.path.insert(0, os.path.join(BASE_DIR, "backend"))
 
 from flask import Flask, request, jsonify, send_from_directory, send_file
 from flask_cors import CORS
-from db import get_db, init_db, seed_catalog_for_user, DB_PATH, backup_db
+try:
+    from db import get_db, init_db, seed_catalog_for_user, DB_PATH, backup_db
+except ImportError:
+    from backend.db import get_db, init_db, seed_catalog_for_user, DB_PATH, backup_db
 
 candidate_dists = [
     os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")),
