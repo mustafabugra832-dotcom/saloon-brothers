@@ -1,7 +1,7 @@
 FROM node:18-alpine AS frontend-builder
 WORKDIR /app
 COPY . .
-RUN if [ -d frontend ] && [ -f frontend/package.json ]; then cd frontend && npm install && npm run build; else npm install && npm run build; fi
+RUN npm install && npm run build
 
 FROM python:3.11-slim
 WORKDIR /app
